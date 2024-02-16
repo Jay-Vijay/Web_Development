@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <h1>Hello, Welcome to Web Development</h1>
+        <p>Experiment 1: Create a web page to embed a map along with hot spot, frames & links.</p>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Interactive Map Page</title>
+        <style href="style.css"></style>
+    
+    </head>
+    <body>
+        <section id="map">
+            <h2>Interactive Map</h2>
+            <!-iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2249.682508781519!2d-0.1284871839813493!3d51.50739631707622!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4876054ce54eabcb%3A0x27b95f2f18e09c4c!2sBig%20Ben!5e0!3m2!1sen!2suk!4v1643523678147!5m2!1sen!2suk" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2249.682508781519!2d-0.1284871839813493!3d51.50739631707622!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4876054ce54eabcb%3A0x27b95f2f18e09c4c!2sBig%20Ben!5e0!3m2!1sen!2suk!4v1643523678147!5m2!1sen!2suk" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        </section>
+        <section id="hotspot">
+            <h2>Hotspot Information</h2>
+            <h2>Hotspot Information</h2>
+            <div id="hotspot-info">
+                <p id="hotspot1" class="hotspot" onclick="showHotspotInfo('Hotspot 1')">Hotspot 1</p>
+                <p id="hotspot2" class="hotspot" onclick="showHotspotInfo('Hotspot 2')">Hotspot 2</p>
+                <!-- Add more hotspots as needed -->
+            </div>
+            <div id="hotspot-details">
+                <!-- Hotspot details will be dynamically populated here -->
+            </div>
+            <p>Click on the map for more details.</p>
+        </section>
+        <section id="frame">
+            <!-a href="https://www.youtube.com/feed/you">Click here for youtube home</a>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/https://www.youtube.com/feed/you" frameborder="0" allowfullscreen></iframe>
+        </section>
+        <script>
+            function showHotspotInfo(info) {
+                // Display hotspot details dynamically
+                var hotspotDetails = document.getElementById("hotspot-details");
+                hotspotDetails.innerHTML = "<p>" + info + " details go here.</p>";
+            }
+        </script>
+
+    </body>
+</html>
